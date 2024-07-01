@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Document</title>
+    <script src="js/jQuery.js" type="text/javascript"></script>
+    <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <script src="js/Mask.js" type="text/javascript"></script>
+    <script src="js/Select.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+
+    <form class="form" action="word.php" method="POST" enctype="multipart/form-data">
+        <label class="label">О себе</label>
+        <input type="text" class="box" name="surname" placeholder="Введите Фамилию">
+        <input type="text" class="box" name="name" placeholder="Введите Имя">
+        <input type="text" class="box" name="patronymic" placeholder="Введите Отчество">
+        <br>
+        <label class="label">Гражданство</label>
+        <br>
+        <br>
+        <input type="checkbox" class="checList" name="citizenship" onmousedown="this.form.myText.disabled=!this.checked" value="РФ">
+        <span class="sp">РФ</span>
+
+        <input type="text" class="drugoe" name="citizenship" id="myText" placeholder="Другое">
+        <input type="text" class="box" name="user_email" placeholder="Введите свою электронную почту" required>
+        <input type="text" id="data" class="box" name="BDATE" placeholder="Дата рождения">
+        <input type="text" class="box" name="BPLACE" placeholder="Место рождения">
+        <input type="text" class="box" name="ADDRESP" placeholder="Адрес места жительства: по паспорту (прописка)">
+        <input type="text" class="box" name="ADDRESF" placeholder="Фактический адрес места жительства">
+        <input type="text" class="box" name="INDEX" placeholder="Введите Индекс">
+        <input type="tel" class="box" id="phone" name="PHONE" placeholder="Введите Телефон">
+
+        <span class="span4">На обработку моих персональных данных согласен(а):</span>
+        <input type="checkbox" class="checList4" name="OBRBTK" id="myCheck3" value="Да">
+        <br>
+        <br>
+        <span class="span4">На участие в общественно полезном труде согласен(а):</span>
+        <input type="checkbox" class="checList4" name="UHSTT" id="myCheck3" value="Да">
+        <br>
+        <br>
+        <span class="span4">Среднее профессиональное образование получаю впервые </span>
+        <input type="checkbox" class="checList5" name="FIRSTOBR" id="myCheck9" value="Да" onmousedown="this.form.myCheck8.disabled=!this.checked">
+        <span class="span5">ДА</span>
+        <input type="checkbox" class="checList5" name="FIRSTOBR" id="myCheck8" value="НЕТ" onmousedown="this.form.myCheck9.disabled=!this.checked">
+        <span class="span5">НЕТ</span>
+
+        <div class="form1">
+
+            <label class="label">Родители</label>
+            <input type="text" class="box1" name="SURNAMEF" placeholder="Фамилия Отца">
+            <input type="text" class="box1" name="NAMEF" placeholder="Имя Отца">
+            <input type="text" class="box1" name="PATRONYMICF" placeholder="Отчество Отца">
+            <input type="tel" class="box1" id="phone1" name="PHONEF" placeholder="Телефон Отца">
+            <input type="text" class="box1" name="SURNAMEM" placeholder="Фамилия Мамы">
+            <input type="text" class="box1" name="NAMEM" placeholder="Имя Мамы">
+            <input type="text" class="box1" name="PATRONYMICM" placeholder="Отчество Мамы">
+            <input type="tel" class="box1" id="phone2" name="PHONEM" placeholder="Телефон Мамы">
+            
+        </div>
+        <div class="form2">
+            
+            <label class="label">Документы</label>
+            <input type="text" class="box" id="PASS" name="PASS" placeholder="Серия паспорта">
+            <input type="text" class="box" id="PASN" name="PASN" placeholder="Номер паспорта">
+            <input type="text" class="box" name="PASV" placeholder="Кем выдан">
+            <input type="text" id="data1" class="box" name="PASD" placeholder="Дата выдачи">
+            <input type="text" class="box" name="INN" placeholder="ИНН">
+            <input type="text" class="box" id="SNILS" name="SNILS" placeholder="СНИЛС">
+            
+                <select name="DOBR" class="select2" required> 
+                  <option value='', disabled selected>ВЫБОР ДОКУМЕНТА ОБ ОБРАЗОВАНИИ</option>
+                  <option value="Диплом">ДИПЛОМ</option>
+                  <option value="Аттестат">АТТЕСТАТ</option>
+                </select>
+
+              <div>
+                <input type="checkbox" class="checList1" name="ATTESTOTL" id="myCheck1" value="Аттестат с отличием" onmousedown="this.form.myCheck.disabled=!this.checked">
+                <span class="span">Аттестат с отличием</span>
+                <input type="checkbox" id="myCheck" class="checList2" name="ATTESTOTL" value="Диплом с отличием"onmousedown="this.form.myCheck1.disabled=!this.checked"></div>
+                <span class="span1">Диплом с отличием</span>
+                <br>
+                <br>
+            <input type="text" id="DOBRD" class="box" name="DOBRD" placeholder="Дата выдачи">
+            <input type="text" class="box" name="DOBRV" placeholder="Кем выдан">
+            <input type="text" class="box" name="DOBRN" placeholder="Серия и номер документа об образовании">
+            <span class="span2">Требуется ли общежитие для проживания</span>
+
+            <input type="checkbox" class="checList3" name="HOSTEL" id="myCheck5" value="Требуеся" onmousedown="this.form.myCheck4.disabled=!this.checked">
+            <span class="span3">Да</span>
+
+            <input type="checkbox" class="checList3" name="HOSTEL" id="myCheck4" value="Не требуеся" onmousedown="this.form.myCheck5.disabled=!this.checked">
+            <span class="span3">Нет</span>
+
+            <select name="OBRFORM" class="select7" required> 
+              <option value='', disabled selected>ВЫБОР ФОРМЫ ОБРАЗОВАНИЯ</option>
+              <option value="Очная">ОЧНАЯ</option>
+              <option value="Заочная">ЗАОЧНАЯ</option>
+            </select>
+
+            <select name="OBRPAY" class="select8" required> 
+              <option value='', disabled selected>ВЫБОР ФОРМЫ ОПЛАТЫ</option>
+              <option value="ФИНАНСИРОВАНИЕ ИЗ СРЕДСТВ ОБЛАСТНОГО БЮДЖЕТА" class="custom-option">ФИНАНСИРОВАНИЕ ИЗ СРЕДСТВ ОБЛАСТНОГО БЮДЖЕТА</option>
+              <option value="ПО ДОГОВОРУ С ОПЛАТОЙ СТОИМОСТИ ОБУЧЕНИЯ">ПО ДОГОВОРУ С ОПЛАТОЙ СТОИМОСТИ ОБУЧЕНИЯ</option>
+            </select>
+            
+            <select name="OBRLVL" class="select9" required> 
+              <option value='', disabled selected>ИМЕЮ СЛЕДУЮЩИЙ УРОВЕНЬ ОБРАЗОВАНИЯ</option>
+              <option value="ОСНОВНОЕ ОБЩЕЕ ОБРАЗОВАНИЕ">ОСНОВНОЕ ОБЩЕЕ ОБРАЗОВАНИЕ</option>
+              <option value="СРЕДНЕЕ ОБЩЕЕ ОБРАЗОВАНИЕ">СРЕДНЕЕ ОБЩЕЕ ОБРАЗОВАНИЕ</option>
+              <option value="НАЧАЛЬНОЕ ПРОФЕССИОНАЛЬНОЕ ОБРАЗОВАНИЕ">НАЧАЛЬНОЕ ПРОФЕССИОНАЛЬНОЕ ОБРАЗОВАНИЕ</option>
+              <option value="ДРУГОЕ ">ДРУГОЕ</option>
+            </select>
+            
+            <input type="tel" class="box2" id="DATEZD" name="DATEZD" placeholder="Дата заполнения документа">
+            
+            </div>
+            
+            <label>
+                <select name="PROF1" class="select1" required>
+                  <option value='', disabled selected>ВЫБОР КОДА И НАИМЕНОВАНИЯ ЖЕЛАЕМОЙ СПЕЦИАЛЬНОСТИ / ПРОФЕССИИ</option>
+                  <option value="46.02.01 ДОКУМЕНТАЦИОННОЕ ОБЕСПЕЧЕНИЕ УПРАВЛЕНИЯ И АРХИВОВЕДЕНИЕ">46.02.01 ДОКУМЕНТАЦИОННОЕ ОБЕСПЕЧЕНИЕ УПРАВЛЕНИЯ И АРХИВОВЕДЕНИЕ</option>
+                  <option value="15.02.10 МЕХАТРОНИКА И МОБИЛЬНАЯ РОБОТОТЕХНИКА (по отраслям)">15.02.10 МЕХАТРОНИКА И МОБИЛЬНАЯ РОБОТОТЕХНИКА (по отраслям)</option>
+                  <option value="09.02.07 ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ПРОГРАММИРОВАНИЕ">09.02.07 ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ПРОГРАММИРОВАНИЕ</option>
+                  <option value="13.02.02 ТЕПЛОСНАБЖЕНИЕ И ТЕПЛОТЕХНИЧЕСКОЕ ОБОРУДОВАНИЕ">13.02.02 ТЕПЛОСНАБЖЕНИЕ И ТЕПЛОТЕХНИЧЕСКОЕ ОБОРУДОВАНИЕ</option>
+                  <option value="13.02.11 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ И ОБСЛУЖИВАНИЕ ЭЛЕКТРИЧЕСКОГО И ЭЛЕКТРОМЕХАНИЧЕСКОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)">13.02.11 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ И ОБСЛУЖИВАНИЕ ЭЛЕКТРИЧЕСКОГО И ЭЛЕКТРОМЕХАНИЧЕСКОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)</option>
+                  <option value="15.02.12 МОНТАЖ, ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ И РЕМОНТ ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)">15.02.12 МОНТАЖ, ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ И РЕМОНТ ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)</option>
+                  <option value="15.02.08 ТЕХНОЛОГИЯ МАШИНОСТРОЕНИЯ">15.02.08 ТЕХНОЛОГИЯ МАШИНОСТРОЕНИЯ</option>
+                  <option value="15.02.14 ОСНАЩЕНИЕ СРЕДСТВАМИ АВТОМАТИЗАЦИИ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ И ПРОИЗВОДСТВ (ПО ОТРАСЛЯМ)">15.02.14 ОСНАЩЕНИЕ СРЕДСТВАМИ АВТОМАТИЗАЦИИ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ И ПРОИЗВОДСТВ (ПО ОТРАСЛЯМ)</option>
+                  <option value="21.02.15 ОТКРЫТЫЕ ГОРНЫЕ РАБОТЫ">21.02.15 ОТКРЫТЫЕ ГОРНЫЕ РАБОТЫ</option>
+                  <option value="21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО">21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО</option>
+                  <option value="21.02.17 ПОДЗЕМНАЯ РАЗРАБОТКА МЕСТОРОЖДЕНИЙ ПОЛЕЗНЫХ ИСКОПАЕМЫХ">21.02.17 ПОДЗЕМНАЯ РАЗРАБОТКА МЕСТОРОЖДЕНИЙ ПОЛЕЗНЫХ ИСКОПАЕМЫХ</option>
+                  <option value="23.02.06 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ ПОДВИЖНОГО СОСТАВА ЖЕЛЕЗНЫХ ДОРОГ">23.02.06 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ ПОДВИЖНОГО СОСТАВА ЖЕЛЕЗНЫХ ДОРОГ</option>
+                  <option value="21.01.08 МАШИНИСТ НА ОТКРЫТЫХ ГОРНЫХ РАБОТАХ">21.01.08 МАШИНИСТ НА ОТКРЫТЫХ ГОРНЫХ РАБОТАХ</option>
+                  <option value="15.01.05 СВАРЩИК (РУЧНОЙ И ЧАСТИЧНО МЕХАНИЗИРОВАННОЙ СВАРКИ (НАПЛАВКИ)">15.01.05 СВАРЩИК (РУЧНОЙ И ЧАСТИЧНО МЕХАНИЗИРОВАННОЙ СВАРКИ (НАПЛАВКИ)</option>
+                  <option value="23.01.09 МАШИНИСТ ЛОКОМОТИВА">23.01.09 МАШИНИСТ ЛОКОМОТИВА</option>
+                  <option value="15.01.35 МАСТЕР СЛЕСАРНЫХ РАБОТ">15.01.35 МАСТЕР СЛЕСАРНЫХ РАБОТ</option>
+                  <option value="18.01.02 ЛАБОРАНТ-ЭКОЛОГ">18.01.02 ЛАБОРАНТ-ЭКОЛОГ</option>
+                  <option value="21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО">21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО</option>
+                </select>
+              </label>
+              
+              <label class="select3">
+                <select name="PROF2" class="select5" required>
+                  <option value='', disabled selected>ВЫБОР КОДА И НАИМЕНОВАНИЯ ЖЕЛАЕМОЙ СПЕЦИАЛЬНОСТИ / ПРОФЕССИИ ЗАПАСНОЙ ВАРИАНТ 1</option>
+                  <option value="46.02.01 ДОКУМЕНТАЦИОННОЕ ОБЕСПЕЧЕНИЕ УПРАВЛЕНИЯ И АРХИВОВЕДЕНИЕ">46.02.01 ДОКУМЕНТАЦИОННОЕ ОБЕСПЕЧЕНИЕ УПРАВЛЕНИЯ И АРХИВОВЕДЕНИЕ</option>
+                  <option value="15.02.10 МЕХАТРОНИКА И МОБИЛЬНАЯ РОБОТОТЕХНИКА (по отраслям)">15.02.10 МЕХАТРОНИКА И МОБИЛЬНАЯ РОБОТОТЕХНИКА (по отраслям)</option>
+                  <option value="09.02.07 ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ПРОГРАММИРОВАНИЕ">09.02.07 ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ПРОГРАММИРОВАНИЕ</option>
+                  <option value="13.02.02 ТЕПЛОСНАБЖЕНИЕ И ТЕПЛОТЕХНИЧЕСКОЕ ОБОРУДОВАНИЕ">13.02.02 ТЕПЛОСНАБЖЕНИЕ И ТЕПЛОТЕХНИЧЕСКОЕ ОБОРУДОВАНИЕ</option>
+                  <option value="13.02.11 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ И ОБСЛУЖИВАНИЕ ЭЛЕКТРИЧЕСКОГО И ЭЛЕКТРОМЕХАНИЧЕСКОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)">13.02.11 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ И ОБСЛУЖИВАНИЕ ЭЛЕКТРИЧЕСКОГО И ЭЛЕКТРОМЕХАНИЧЕСКОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)</option>
+                  <option value="15.02.12 МОНТАЖ, ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ И РЕМОНТ ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)">15.02.12 МОНТАЖ, ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ И РЕМОНТ ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)</option>
+                  <option value="15.02.08 ТЕХНОЛОГИЯ МАШИНОСТРОЕНИЯ">15.02.08 ТЕХНОЛОГИЯ МАШИНОСТРОЕНИЯ</option>
+                  <option value="15.02.14 ОСНАЩЕНИЕ СРЕДСТВАМИ АВТОМАТИЗАЦИИ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ И ПРОИЗВОДСТВ (ПО ОТРАСЛЯМ)">15.02.14 ОСНАЩЕНИЕ СРЕДСТВАМИ АВТОМАТИЗАЦИИ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ И ПРОИЗВОДСТВ (ПО ОТРАСЛЯМ)</option>
+                  <option value="21.02.15 ОТКРЫТЫЕ ГОРНЫЕ РАБОТЫ">21.02.15 ОТКРЫТЫЕ ГОРНЫЕ РАБОТЫ</option>
+                  <option value="21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО">21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО</option>
+                  <option value="21.02.17 ПОДЗЕМНАЯ РАЗРАБОТКА МЕСТОРОЖДЕНИЙ ПОЛЕЗНЫХ ИСКОПАЕМЫХ">21.02.17 ПОДЗЕМНАЯ РАЗРАБОТКА МЕСТОРОЖДЕНИЙ ПОЛЕЗНЫХ ИСКОПАЕМЫХ</option>
+                  <option value="23.02.06 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ ПОДВИЖНОГО СОСТАВА ЖЕЛЕЗНЫХ ДОРОГ">23.02.06 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ ПОДВИЖНОГО СОСТАВА ЖЕЛЕЗНЫХ ДОРОГ</option>
+                  <option value="21.01.08 МАШИНИСТ НА ОТКРЫТЫХ ГОРНЫХ РАБОТАХ">21.01.08 МАШИНИСТ НА ОТКРЫТЫХ ГОРНЫХ РАБОТАХ</option>
+                  <option value="15.01.05 СВАРЩИК (РУЧНОЙ И ЧАСТИЧНО МЕХАНИЗИРОВАННОЙ СВАРКИ (НАПЛАВКИ)">15.01.05 СВАРЩИК (РУЧНОЙ И ЧАСТИЧНО МЕХАНИЗИРОВАННОЙ СВАРКИ (НАПЛАВКИ)</option>
+                  <option value="23.01.09 МАШИНИСТ ЛОКОМОТИВА">23.01.09 МАШИНИСТ ЛОКОМОТИВА</option>
+                  <option value="15.01.35 МАСТЕР СЛЕСАРНЫХ РАБОТ">15.01.35 МАСТЕР СЛЕСАРНЫХ РАБОТ</option>
+                  <option value="18.01.02 ЛАБОРАНТ-ЭКОЛОГ">18.01.02 ЛАБОРАНТ-ЭКОЛОГ</option>
+                  <option value="21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО">21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО</option>
+                </select>
+              </label>
+
+              <label class="select4">
+                <select name="PROF3" class="select6" required>
+                  <option value='', disabled selected>ВЫБОР КОДА И НАИМЕНОВАНИЯ ЖЕЛАЕМОЙ СПЕЦИАЛЬНОСТИ / ПРОФЕССИИ ЗАПАСНОЙ ВАРИАНТ 2</option>
+                  <option value="46.02.01 ДОКУМЕНТАЦИОННОЕ ОБЕСПЕЧЕНИЕ УПРАВЛЕНИЯ И АРХИВОВЕДЕНИЕ">46.02.01 ДОКУМЕНТАЦИОННОЕ ОБЕСПЕЧЕНИЕ УПРАВЛЕНИЯ И АРХИВОВЕДЕНИЕ</option>
+                  <option value="15.02.10 МЕХАТРОНИКА И МОБИЛЬНАЯ РОБОТОТЕХНИКА (по отраслям)">15.02.10 МЕХАТРОНИКА И МОБИЛЬНАЯ РОБОТОТЕХНИКА (по отраслям)</option>
+                  <option value="09.02.07 ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ПРОГРАММИРОВАНИЕ">09.02.07 ИНФОРМАЦИОННЫЕ СИСТЕМЫ И ПРОГРАММИРОВАНИЕ</option>
+                  <option value="13.02.02 ТЕПЛОСНАБЖЕНИЕ И ТЕПЛОТЕХНИЧЕСКОЕ ОБОРУДОВАНИЕ">13.02.02 ТЕПЛОСНАБЖЕНИЕ И ТЕПЛОТЕХНИЧЕСКОЕ ОБОРУДОВАНИЕ</option>
+                  <option value="13.02.11 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ И ОБСЛУЖИВАНИЕ ЭЛЕКТРИЧЕСКОГО И ЭЛЕКТРОМЕХАНИЧЕСКОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)">13.02.11 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ И ОБСЛУЖИВАНИЕ ЭЛЕКТРИЧЕСКОГО И ЭЛЕКТРОМЕХАНИЧЕСКОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)</option>
+                  <option value="15.02.12 МОНТАЖ, ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ И РЕМОНТ ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)">15.02.12 МОНТАЖ, ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ И РЕМОНТ ПРОМЫШЛЕННОГО ОБОРУДОВАНИЯ (ПО ОТРАСЛЯМ)</option>
+                  <option value="15.02.08 ТЕХНОЛОГИЯ МАШИНОСТРОЕНИЯ">15.02.08 ТЕХНОЛОГИЯ МАШИНОСТРОЕНИЯ</option>
+                  <option value="15.02.14 ОСНАЩЕНИЕ СРЕДСТВАМИ АВТОМАТИЗАЦИИ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ И ПРОИЗВОДСТВ (ПО ОТРАСЛЯМ)">15.02.14 ОСНАЩЕНИЕ СРЕДСТВАМИ АВТОМАТИЗАЦИИ ТЕХНОЛОГИЧЕСКИХ ПРОЦЕССОВ И ПРОИЗВОДСТВ (ПО ОТРАСЛЯМ)</option>
+                  <option value="21.02.15 ОТКРЫТЫЕ ГОРНЫЕ РАБОТЫ">21.02.15 ОТКРЫТЫЕ ГОРНЫЕ РАБОТЫ</option>
+                  <option value="21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО">21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО</option>
+                  <option value="21.02.17 ПОДЗЕМНАЯ РАЗРАБОТКА МЕСТОРОЖДЕНИЙ ПОЛЕЗНЫХ ИСКОПАЕМЫХ">21.02.17 ПОДЗЕМНАЯ РАЗРАБОТКА МЕСТОРОЖДЕНИЙ ПОЛЕЗНЫХ ИСКОПАЕМЫХ</option>
+                  <option value="23.02.06 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ ПОДВИЖНОГО СОСТАВА ЖЕЛЕЗНЫХ ДОРОГ">23.02.06 ТЕХНИЧЕСКАЯ ЭКСПЛУАТАЦИЯ ПОДВИЖНОГО СОСТАВА ЖЕЛЕЗНЫХ ДОРОГ</option>
+                  <option value="21.01.08 МАШИНИСТ НА ОТКРЫТЫХ ГОРНЫХ РАБОТАХ">21.01.08 МАШИНИСТ НА ОТКРЫТЫХ ГОРНЫХ РАБОТАХ</option>
+                  <option value="15.01.05 СВАРЩИК (РУЧНОЙ И ЧАСТИЧНО МЕХАНИЗИРОВАННОЙ СВАРКИ (НАПЛАВКИ)">15.01.05 СВАРЩИК (РУЧНОЙ И ЧАСТИЧНО МЕХАНИЗИРОВАННОЙ СВАРКИ (НАПЛАВКИ)</option>
+                  <option value="3.01.09 МАШИНИСТ ЛОКОМОТИВА">23.01.09 МАШИНИСТ ЛОКОМОТИВА</option>
+                  <option value="15.01.35 МАСТЕР СЛЕСАРНЫХ РАБОТ">15.01.35 МАСТЕР СЛЕСАРНЫХ РАБОТ</option>
+                  <option value="18.01.02 ЛАБОРАНТ-ЭКОЛОГ">18.01.02 ЛАБОРАНТ-ЭКОЛОГ</option>
+                  <option value="21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО">21.02.14 МАРКШЕЙДЕРСКОЕ ДЕЛО</option>
+                </select>
+              </label>
+
+              <button class="form_button" type="submit">Отправить</button>
+
+    </form>
+
+
+
+
+</body>
+
+</html>
